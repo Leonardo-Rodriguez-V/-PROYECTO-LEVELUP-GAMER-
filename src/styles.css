@@ -1,0 +1,69 @@
+/* Estilos consolidados (parte del CSS que tenías en el HTML original) */
+
+/* Fonts: puedes seguir importando Orbitron/Roboto en main.jsx o index.html */
+:root { 
+  --azul-electrico: #1E90FF; 
+  --verde-neon: #39FF14; 
+}
+*{ box-sizing: border-box; }
+html,body,#root{ height:100%; }
+body{
+  margin:0;
+  font-family:'Roboto',sans-serif;
+  background:#000;
+  color:#fff;
+}
+
+/* Navbar */
+.navbar{ background: #2f3235; border-bottom: 1px solid rgba(255,255,255,0.03); }
+
+/* Headings / neon */
+.navbar-brand, h1, h2, h3 { font-family: 'Orbitron', sans-serif; color: var(--azul-electrico) !important; }
+.hero-title { font-family: 'Orbitron', sans-serif; color: var(--azul-electrico); }
+
+/* Buttons */
+.btn-primary { background: var(--azul-electrico); border:none; color:#fff; }
+.btn-primary:hover { background: var(--verde-neon); color:#000 !important; }
+.btn-neon { background: var(--verde-neon); color:#000; border:none; box-shadow: 0 0 10px var(--verde-neon), 0 0 20px var(--azul-electrico); }
+.btn-neon:hover { background: var(--azul-electrico); color:#fff !important; }
+
+/* Cards */
+.card{ background:#1a1a1a; border:1px solid var(--azul-electrico); margin-bottom:20px; }
+.card-title{ color: var(--verde-neon); }
+
+.blog-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+
+
+/* WhatsApp floating */
+.whatsapp-floating{ position: fixed; bottom: 30px; right: 30px; z-index:1000; }
+.whatsapp-floating a{ background:#25D366; width:60px; height:60px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 0 25px rgba(37,211,102,.5); }
+.whatsapp-floating i{ color:white; font-size:2rem; }
+.whatsapp-floating .tooltip{ visibility:hidden; background:rgba(0,0,0,.8); color:white; padding:5px 10px; border-radius:5px; position:absolute; right:70px; white-space:nowrap; }
+.whatsapp-floating:hover .tooltip{ visibility:visible; }
+
+/* Toast demo */
+#toastContainer{ position: fixed; top: 20px; right: 20px; z-index: 1050; }
+
+/* Neon sections */
+.neon-section{ box-shadow: 0 0 20px var(--azul-electrico); border-radius: 8px; }
+.game-section{ box-shadow: 0 0 20px var(--verde-neon); }
+
+/* Catalog layout */
+.product-grid{ display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin: 28px 0 80px; }
+.card-product{ background:#0b0c0d; border-radius:8px; overflow:hidden; border:1px solid rgba(57,164,255,0.08); display:flex; flex-direction:column; }
+.card-product img{ width:100%; height:220px; object-fit:contain; }
+.card-body{ padding:14px; display:flex; flex-direction:column; gap:10px; }
+
+/* Footer */
+footer{ background: linear-gradient(180deg,#0b0b0b,#0a0a0a); padding:28px 0; margin-top:40px; }
+
+/* Responsive */
+@media (max-width: 1100px){ .product-grid{ grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 720px){ .product-grid{ grid-template-columns: 1fr; } }
